@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="{{ absURL `styles/dimbox.min.css` }}" />
   <title>
     {{ .Site.Title }}
-    {{ if .Title }}
+    {{ if not (eq .Site.Title .Title) }}
       - {{ .Title }}
     {{ end }}
   </title>
