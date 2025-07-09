@@ -1,22 +1,44 @@
 <nav>
-    <a
-      href="/"
-      class="nav-button"
-    >
-        <button>Home</button></a>
-    <a
-      href="/posts"
-      class="nav-button"
-    >
-        <button>Posts</button></a>
-    <a
-      href="/tags"
-      class="nav-button"
-    >
-        <button>Tags</button></a>
-    <a
-      href="/commissions"
-      class="nav-button"
-    >
-        <button>Comms</button></a>
+  <a
+    href="/"
+    class="nav-button"
+  >
+    <button>Home</button>
+  </a>
+
+  {{ if .Site.Params.show_posts }}
+  <a
+    href="/posts"
+    class="nav-button"
+  >
+    <button>Posts</button>
+  </a>
+  {{ end }}
+
+  {{ if .Site.Params.show_tags }}
+  <a
+    href="/tags"
+    class="nav-button"
+  >
+    <button>Tags</button>
+  </a>
+  {{ end }}
+
+  {{ if .Site.Params.show_posts }}
+  <a
+    href="/commissions"
+    class="nav-button"
+  >
+    <button>Comms</button>
+  </a>
+  {{ end }}
+
+  {{ if .Site.Params.show_socials }}
+  <a
+    href="/socials"
+    class="nav-button"
+  >
+    <button>Socials</button>
+  </a>
+  {{ end }}
 </nav>

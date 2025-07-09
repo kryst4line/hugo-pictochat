@@ -89,11 +89,33 @@ a.nav-button {
 .nav-button.lg-button {
   height: 5rem;
   flex-grow: 0;
+  text-decoration: none;
 }
 
 .nav-button.lg-button button {
   height: 100%;
   padding: 0 2rem;
+
+  &:has(img) {
+    padding-left: 0.25rem;
+    padding-right: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.nav-button.lg-button button img {
+  height: 4.25rem;
+  width: 4.25rem;
+  border: 2px solid #00000050;
+  background: #00000005;
+  padding: 0.25rem;
+}
+
+.nav-button.lg-button button span {
+  flex-grow: 1;
+  width: 100%;
 }
 
 .page-nav {

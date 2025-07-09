@@ -1,0 +1,5 @@
+[params]
+  show_posts = "true"
+  show_tags = "true"
+  show_comms = "true"
+  show_socials = "true"

@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <div
+    style="
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+    class="anim-fade-in"
+  >
+    <div
+      class="comms-list"
+    >
+      {{ range .Pages.ByWeight }}
+      {{ with .Resources.Get "social" }}
+          <a
+            href="{{ .Params.url }}"
+            target="_blank"
+            class="nav-button lg-button"
+          >
+            <button>
+              {{ with . | images.Filter (images.Brightness 60) }}
+              <img
+                src="{{ .RelPermalink }}"
+              />
+              {{ end }}
+              <span>
+                {{ .Title }}
+              </span>
+            </button>
+          </a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
