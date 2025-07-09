@@ -302,6 +302,7 @@ article .content img {
 @media (max-width: 800px) {
   body {
     max-width: unset;
+    overflow: hidden;
   }
 
   body > img {
