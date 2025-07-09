@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See httpsgithub.comgohugoiohugoThemes#themetoml for an example
+
+name = "DragonDS"
+license = "MIT"
+licenselink = "https://mit-license.org/"
+description = "Multipurpose theme, inspired by Nintendo DS' UI"
+homepage = "Website of your theme"
+tags = ["blog", "company"]
+features = ["some", "awesome", "features"]
+min_version = "0.59.1"
+
+[author]
+  name = "Krystaline"
+  homepage = "https://dragon.gal"

@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'The Amazing World of Gumball'
+theme = 'pictochat'

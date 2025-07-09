@@ -1,0 +1,37 @@
+<article
+  style="
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+  "
+>
+  <a
+    href="{{ .RelPermalink }}"
+    class="title"
+    style="
+      top: 0;
+      border-top: 0;
+      border-bottom: 0;
+      border-radius: 0;
+      padding-right: 0.75rem;
+    "
+  >
+    {{ .Title }}
+  </a>
+  <div
+    class="content"
+    style="
+      padding: 0;
+      margin-top: 3px;
+      margin-left: 0.5rem;
+      margin-right: 0.75rem;
+    "
+  >
+    <div
+      class="subtitle"
+      style="margin-bottom: 0"
+    >
+      <span class="publish-date">{{ .Pages.Len }} posts</span>
+    </div>
+  </div>
+</article>

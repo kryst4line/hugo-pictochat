@@ -1,0 +1,18 @@
+{{ define "main" }}
+  {{ if not (eq .CurrentSection.Title .FirstSection.Title) }}
+    <span class="section-header">
+      {{ .FirstSection.Title }}:
+      {{ .Title }}
+    </span>
+    {{ range .Pages.ByLength.Reverse }}
+      {{- partial "listpost.html" . -}}
+    {{ end }}
+  {{ else }}
+    <span class="section-header">
+      {{ .Title }}
+    </span>
+    {{ range .Pages.ByLength.Reverse }}
+      {{- partial "listtag.html" . -}}
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+    <div id="content">
+        {{- block "main" . }}{{- end }}
+    </div>
+    {{- partial "nav.html" . -}}
+    <img
+      src="{{ absURL `images/dragon ds.png` }}"
+    />
+    <script src="{{ absURL `js/dimbox.min.js` }}"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<article
+  class="anim-fade-in"
+>
+  <span class="title">{{ .Title }}</span>
+  <div class="content">
+    {{ .Content }}
+
+    <div
+      class="comms-gallery"
+    >
+      {{ range .Resources }}
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <span style="font-weight: bold">{{ .Title }}</span>
+        <span>Starting at {{ .Params.price }}</span>
+
+        <a
+          href="{{ .RelPermalink }}"
+          data-dimbox="my-gallery"
+          class="comms-thumb"
+        >
+          <img src="{{ .RelPermalink }}"/>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</article>
+
+{{ end }}

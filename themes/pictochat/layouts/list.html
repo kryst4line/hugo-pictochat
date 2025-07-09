@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <span class="section-header">
+    {{ if not (eq .CurrentSection.Title .FirstSection.Title) }}
+      {{ .FirstSection.Title }}:
+    {{ end }}
+    {{ .Title }}
+  </span>
+  {{ range .Pages.ByPublishDate.Reverse }}
+    {{- partial "listitem.html" . -}}
+  {{ end }}
+{{ end }}

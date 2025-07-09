@@ -1,0 +1,30 @@
+<article>
+  <a
+    href="{{ .RelPermalink }}"
+    class="title"
+  >
+    {{ .Title }}
+  </a>
+  <div
+    class="content"
+  >
+    {{ if (or .PublishDate .Params.Tags) }}
+      <div
+        class="subtitle"
+        style="margin-bottom: 0"
+      >
+        {{ if .PublishDate }}
+          <span class="publish-date">{{ .PublishDate.Format "January 2, 2006" }}</span>
+        {{ end }}
+
+        {{ if .Params.tags }}
+          <div
+            class="tag-list"
+          >
+            {{ partial "tags.html" . -}}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>

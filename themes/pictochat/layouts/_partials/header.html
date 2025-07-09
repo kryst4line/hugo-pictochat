@@ -1,0 +1,13 @@
+<header>
+  <div class="header-bar">
+    <a
+      href="/"
+      class="site-title"
+    >
+      {{ .Site.Title }}
+    </a>
+    <span class="header-time">
+      {{ now | time.Format "15:04" }}
+    </span>
+  </div>
+</header>

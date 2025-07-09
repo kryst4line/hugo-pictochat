@@ -1,0 +1,72 @@
+{{ define "main" }}
+<div
+  class="page-nav"
+>
+  {{ if .PrevInSection }}
+    <a
+      href="{{ .PrevInSection.RelPermalink }}"
+      class="nav-button"
+    >
+      <button
+        style="font-size: 14px"
+      >
+        Previous post
+      </button>
+    </a>
+  {{ else }}
+    <div></div>
+  {{ end }}
+
+  {{ if .NextInSection }}
+    <a
+      class="nav-button"
+      href="{{ .NextInSection.RelPermalink }}"
+    >
+      <button
+        style="font-size: 14px"
+      >
+        Next post
+      </button>
+    </a>
+  {{ else }}
+    <div></div>
+  {{ end }}
+</div>
+<article>
+  <a
+    href="{{ .RelPermalink }}"
+    class="title"
+    style="font-size: 18px"
+  >
+    {{ .Title }}
+  </a>
+  <div
+    class="content"
+  >
+    {{ if .PublishDate }}
+      <span
+        class="publish-date"
+        style="font-size: 14px;"
+      >
+        {{ .PublishDate.Format "January 2, 2006 - 15:04" }}
+      </span>
+    {{ end }}
+
+    <div
+      style="margin-top: 1rem;"
+    >
+      {{ .Content }}
+    </div>
+
+    {{ if .Params.tags }}
+    <div
+      class="tag-list"
+      style="font-size: 13px; margin-top: 1rem;"
+    >
+      <span>Tags:</span>
+      {{ partial "tags.html" . -}}
+    </div>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

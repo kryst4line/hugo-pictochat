@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+  <div
+    style="
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+    class="anim-fade-in"
+  >
+    <div
+      class="comms-list"
+    >
+      {{ range .Pages.ByWeight }}
+      <a
+        href="{{ .RelPermalink }}"
+        class="nav-button lg-button"
+      >
+        <button>{{ .Title }}</button>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
