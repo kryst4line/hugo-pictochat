@@ -5,7 +5,11 @@
     {{ end }}
     {{ .Title }}
   </span>
-  {{ range .Pages.ByPublishDate.Reverse }}
-    {{- partial "listpost.html" . -}}
+  {{ range $index, $element := .Pages.ByPublishDate.Reverse }}
+    {{ if eq $index 0 }}
+      {{- partial "listitem.html" $element -}}
+    {{ else }}
+      {{- partial "listpost.html" $element -}}
+    {{ end }}
   {{ end }}
 {{ end }}
