@@ -1,6 +1,5 @@
 +++
 date = '2025-07-03T12:42:19+02:00'
-draft = true
 title = 'What is a post but a succession of words'
 tags = ["nds", "nintendo"]
 +++

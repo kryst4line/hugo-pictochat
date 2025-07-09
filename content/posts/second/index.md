@@ -1,6 +1,5 @@
 +++
 date = '2025-07-07T12:42:19+02:00'
-draft = true
 title = 'This is a Sunk Cost Fallacy, a slow motion tragedy'
 tags = ["nds", "nintendo"]
 +++
