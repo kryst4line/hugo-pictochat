@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gh-pages": "hugo --baseURL https://kryst4line.github.io/hugo-pictochat/ -d ./docs"
+    "gh-pages": "hugo --baseURL https://kryst4line.github.io/hugo-pictochat/ -d ./docs",
+    "neocities": "hugo --baseURL https://hugo-pictochat.neocities.org/ -d ./docs"
   },
   "repository": {
     "type": "git",
