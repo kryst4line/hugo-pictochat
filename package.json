@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gh-pages": "hugo -b https://kryst4line.github.io/hugo-pictochat/ -d ./docs"
+    "gh-pages": "hugo --baseURL https://kryst4line.github.io/hugo-pictochat/ -d ./docs"
   },
   "repository": {
     "type": "git",
